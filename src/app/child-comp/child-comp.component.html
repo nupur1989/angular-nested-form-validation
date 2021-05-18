@@ -1,0 +1,12 @@
+<form [formGroup]="childForm">
+  <input formName ="PhoneNumber"> Phone Number
+
+  <div formArrayName="PhoneNumbers">
+    <div *ngFor=" let PhoneNumbers of getControls().controls; let i = index">
+      <div [formGroupName]="i">
+        <input formName ="PhoneNumber" > Phone Number
+        <button (click) = deleteUrlBtnCLicked(i)>Delete</button>
+      </div>
+    </div>
+  </div>
+</form>

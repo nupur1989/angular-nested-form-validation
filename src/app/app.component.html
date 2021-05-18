@@ -1,0 +1,28 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<form [formGroup]="parentForm" (ngSubmit)="onSubmit()"> Purchase
+  <div formName="name">
+    <input Name>Name
+  </div>
+  <div formName="address">
+    <input address> Address
+  </div>
+
+  <div>
+    <app-child-comp [group]="parentForm">
+    </app-child-comp>
+  </div>
+
+  <div>
+    <button (click) = addPhoneNumber()> add Phone</button>
+  </div>
+
+  <div>
+    <button (click) = clearPhoneNumbersList()> Clear Phone</button>
+  </div>
+
+
+</form>
